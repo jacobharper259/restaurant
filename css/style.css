@@ -1,0 +1,856 @@
+/* Box Model Hack */
+
+* {
+  box-sizing: border-box;
+  font-family: 'roboto','sans serif';
+  overflow-x: hidden !important;
+  margin-right:0;
+  padding-right: 0;
+  
+}
+html body *{
+  overflow-y: hidden;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+.wrapper{
+  margin:0;
+  padding:0;
+  height:100vh;
+  overflow-y: overlay;
+  overflow-x:hidden;
+  perspective: 10px;
+  scrollbar-color: purple;
+}
+.wrapper::-webkit-scrollbar{
+  display:block;
+  width:8px;
+}
+
+.wrapper::-webkit-scrollbar-button{
+  display:none;
+}
+.wrapper::-webkit-scrollbar-track{
+  
+  background-color: transparent;
+
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+  background-color: #fa96016e;
+  border: 1px solid #ffffff40;
+  border-radius: 24px;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	
+	vertical-align: baseline;
+  overflow-x:clip ;
+}
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+header nav ul i:hover{
+  color:orange;
+}
+
+*{
+  margin:0%;
+  padding:0;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+  background-image: url("../background.jpeg");
+  background-size: cover;
+  background-position: right;
+  background-position: top;
+  width:100%;
+  height:100vh;
+}
+.fa-bars{
+  visibility: hidden;
+  font-size: 0;
+  padding: 0;
+  margin:0;
+  
+}
+header nav ul li{
+  float:right;
+  padding:1.5%;
+  list-style: none;
+  margin-right:2.5%;
+  visibility: visible;
+}
+i{
+  float:right;
+  padding:1%;
+  padding-right: 3%;
+}
+header nav ul li:hover{
+  color:orange;
+}
+header nav{
+  margin-right: 5%;
+  width:100%;
+}
+header section{
+  overflow: hidden;
+  margin-left:10vw;
+  margin-top: 20vh;
+  height:70%;
+}
+header section *{
+  overflow: hidden;
+}
+header section h1{
+  font-size: 5vw;
+  margin: 0;
+  overflow-y: hidden;
+}
+header section form{
+  padding-top: 2%;
+  height:15%;
+}
+header form input{
+  border-color:rgb(163, 163, 163);
+  float:left;
+  padding: 4%;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0%;
+  padding-left: 1%;
+  width:25vw;
+  border-top-left-radius: .5em;
+  border-bottom-left-radius: .5em;
+  height:6vh;
+  border-color:rgb(163, 163, 163);
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.192);
+  font-size:2vh
+}
+header form button{
+  height:6vh;
+  background-color: orange;
+  border-color: orange;
+  margin-left:0;
+padding: 1.2%;
+  border-radius: .5em;
+  border-left:none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.192);
+  
+}
+header form i{
+  position:absolute;
+  float:left;
+  font-style: italic;
+  left:11%;
+  padding-top: 2.5vh;
+}
+header section>i{
+  color:orange;
+  padding-top: 3%;
+  float:left;
+  font-size: 150%;
+  padding-left:0;
+}
+header form input:hover{
+  border-color:orange;
+}
+header form button:hover{
+  border-color:rgb(214, 139, 0);
+}
+header section>i:hover{
+  color:rgb(214, 139, 0);
+}
+
+
+
+
+
+
+
+
+.about{
+  position: absolute;
+  height:100vh;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%,rgb(255, 255, 255) 8%, rgb(255, 255, 255) 90%, rgba(255, 255, 255, 0) 100%);
+  margin-left:30%;
+  padding-left: 4%;
+  padding-top: 10%;
+  z-index: 100000;
+  float: left;
+  width:50vw;
+  overflow:visible;
+  top:100vh;
+  overflow-x: hidden;
+}
+.about p{
+  width:90%;
+  font-size: 2vh;
+  margin-top: 4%;
+  overflow-x:hidden;
+}
+.pie{
+  position:relative;
+  height:100vh;
+  left:-70vh;
+  overflow: hidden;
+  top:-100vh;
+  z-index: 1;
+  float:left;
+  
+}
+.bowl{
+  float:right; 
+  height:70vh;
+  left:80vh;
+  overflow: hidden;
+  margin-top:30vh;
+  z-index:4;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+  
+}
+.about h3{
+  font-size: 3vw;
+  color: orange;
+  overflow-y: hidden;
+}
+.hOne{
+
+  margin-top:1%;
+  margin-bottom:0%;
+  font-size: 5vw;
+  overflow:hidden;
+}
+.about h1+h1{
+ 
+  margin-top:0%;
+  
+  width:200%;
+  font-size: 5vw;
+  
+  
+
+}
+@media screen and (max-width: 1290px){
+  .about{
+    
+    width:100%
+  }
+  .about div{
+    width:70%;
+    padding-left: 10%;
+  }
+}
+@media screen and (max-width: 932px){
+  .about{
+    margin-left: 20vw;
+  }
+}
+@media screen and (max-width: 680px){
+  .about{
+    
+    background: rgba(255, 255, 255, 0.623);
+    margin:0;
+    padding-left: 0;
+    width:100%;
+  }
+  .about p {
+    width:100%;
+    
+  }
+  .about div{
+    width:90%;
+    text-align:center;
+  }
+  .about h3{
+    font-size: 4vh;
+  }
+  body .about h1{
+    width:100%;
+  }
+}
+
+
+.meals{
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: absolute;
+  
+  margin-top: 0;
+  width:100%;
+  height: 150vh;
+  background-color: rgb(243,246,247);
+  overflow-y: hidden;
+  
+}
+.meals nav{
+  display:flex;
+  justify-content: space-evenly;
+  padding-top: 2vh;
+  
+}
+.meals nav span{
+  width:20%;
+  text-align: center;
+  border-bottom: 3px solid rgb(92, 92, 92);
+}
+
+.meals nav .highlight{
+  color:orange;
+  border-bottom: 3px solid orange;
+}
+.meals h3{
+  padding-top: 2vh;
+  font-size: 3vh;
+  text-align: center;
+  color:orange;
+}
+.meals h1{
+  font-size: 4vh;
+}
+.meals nav span{
+  font-size: 2.7vh;
+}
+.meals .images{
+  display:flex;
+  
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  
+}
+
+.meals .images>div{
+  margin: 1%;
+  width:20%;
+  position: relative;
+  z-index: 1;
+  top:0;
+  
+}
+.meals .images div:hover  div{
+  opacity:1;
+  visibility: visible;
+}
+.meals .images div div button{
+  width:40%;
+}
+.meals .images div div{
+  position:absolute;
+  top:0;
+  z-index: 100000;
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.425);
+  color:white;
+  
+}
+
+.meals .images img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+.meals .images p{
+  
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  
+}
+.meals .images div section{
+  display: flex;
+  width:100%;
+  justify-content: center;
+  
+}
+.meals .images button{
+  height:10%;
+  width:30%;
+  font-size: 100%;
+  border-radius: .5em;
+  color:white;
+  background: orange;
+  border-color: orange;
+  
+}
+.images div section i{
+  font-size: 1.4vh;
+  padding-top:3%;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color:rgb(255, 217, 0);
+}
+
+@media screen and (max-width: 1400px) and (max-height:800px){
+  .meals {
+    justify-content: flex-start;
+  }
+  .meals h3{
+    
+    padding-top: 5vh;
+  }
+  .meals h1{
+    padding-top: 5vh;
+  }
+  .meals nav{
+    padding-top: 5vh;
+  }
+  .meals .images{
+    padding-top: 5vh;
+  }
+}
+@media screen and (max-width: 1200px){
+  .meals .images div div{
+    opacity:1;
+    visibility: visible;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .meals .images button{
+    font-size: 70%;
+  }
+  
+}
+@media screen and (max-width: 763px) {
+  .meals .images>div{
+    width:30%;
+    height:30%;
+    
+  }
+  
+}
+@media screen and (max-width: 600px){
+  .meals nav span{
+    font-size: 2vh;
+  }
+  .meals .images>div{
+    width:40%;
+    height:23%;
+    
+  }
+}
+@media screen and (max-width: 506px){
+  .meals .images>div{
+    width:40%;
+  }
+  .meals h3{
+    padding-top: 2vh;
+  }
+  .meals h1{
+    padding-top: 2vh;
+  }
+  .meals nav{
+    padding-top: 3vh;
+  }
+  .meals .images{
+    padding-top: 3vh;
+  }
+  .meals nav span{
+    font-size: 2vh;
+  }
+}
+
+
+
+.three-stars .four, .three-stars .five{
+  color:rgb(100, 100, 100);
+}
+.four-stars .five{
+  color:rgb(100,100,100);
+}
+
+.open{
+  background: url('https://cdn.glitch.global/5ad56254-c41c-4503-8773-fa4557dab0d7/bg-schedule.avif?v=1644773418470');
+  background-size: cover;
+  padding-top: 50vh;
+   height:170vh;
+   width:100%;
+  text-align: center;
+  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.911)
+}
+.open h3{
+  padding-top: 3%;
+  font-size: 150%;
+  color:orange;
+}
+.open h1{
+  font-size: 400%;
+  margin-top: 0%;
+  overflow: hidden;
+  margin-bottom: 0%;
+}
+.open i{
+  color:orange;
+  font-size: 150%;
+  float:left;
+  text-align: center;
+  border:2px solid orange;
+  padding: .5%;
+  border-radius: 50%;
+  margin-left: 49%;
+  margin-top: 2%;
+  margin-bottom: 0;
+}
+.open i:hover{
+  background-color: orange;
+  border-color:rgb(143, 96, 8);
+  color:white;
+}
+.open h2{
+  padding-top: 2%;
+  clear:both;
+}
+.open h3{
+  clear:both;
+}
+.open .number{
+  font-size: 175%;
+  margin-top: 0;
+  padding-top: 1%;
+}
+.open .number:hover{
+  color:rgb(143, 96, 8);
+}
+.open div{
+  padding-left: 17%;
+  margin:10%;
+  margin-top: 2%;
+  text-align: start;
+  float:left;
+  margin-bottom: 0%;
+  font-size: 1vw;
+}
+.open div+div{
+  padding-left: 0;
+}
+.open img{
+  width:60vw;
+  
+  
+
+}
+.review{
+  height:100vh;
+  text-align: center;
+}
+.review h3{
+  color:orange;
+  padding-top: 3%;
+  font-size: 150%;
+}
+.review h1{
+  font-size:400%;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.review p{
+  padding: 0% 20%;
+  font-size: 140%;
+  padding-top: 3%;
+}
+.review i{
+  float:none;
+  font-size: 175%;
+  padding-top: 2%;
+  padding-right: 0%;
+  color:orange;
+}
+.review img{
+  margin-top: 3%;
+  border-radius: 50%;
+  height:20%
+}
+
+.review h4{
+  font-size: 250%;
+}
+.review h5{
+  font-size: 150%;
+  
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+/*
+@media screen and (max-width: 1200px){
+  .bowl{
+    visibility: hidden;
+  }
+  .pie{
+    top:-100vh;
+    left:0;
+
+  }
+  .about{
+    width:80vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  .meals div{
+    width:30vw;
+    height:30vh;
+    padding:0;
+    margin-left:0;
+  }
+  .meals>section{
+    margin:3.5%
+  }
+  .meals div p{
+    font-size: 150%;
+    text-align: center;
+    padding-top: 3vh;
+    background-color: rgba(56, 56, 56, 0.575);
+    color:white;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    position:absolute;
+    opacity:0;
+    visibility: hidden;
+    width:100%;
+    height:100%;
+    transition: opacity .2s, visibility .2s;
+  }
+  .meals div p+p{
+    background-color:rgba(255, 255, 255, 0);
+    text-shadow: 1px 1px 2px black;
+    font-size: 125%;
+    text-align: center;
+    padding-top: 7vh;
+    color:white;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    position:absolute;
+    opacity:0;
+    visibility: hidden;
+    width:100%;
+    height:100%;
+    transition: opacity .2s, visibility .2s;
+  }
+  .meals div button{
+    border-radius: .25em;
+    border-color:orange;
+    font-size: 2vw;
+    margin-left: 30%;
+    text-align: center;
+    margin-top: 18vh;
+    background-color: orange;
+    color:white;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    position:absolute;
+    opacity:0;
+    visibility: hidden;
+    width:40%;
+    height:14%;
+    transition: opacity .2s, visibility .2s;
+  }
+  
+  .meals div i{
+    padding-top: 12vh;
+    margin-left: 34%;
+    color:white;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    position:absolute;
+    opacity:0;
+    visibility: hidden;
+    width:100%;
+    height:100%;
+    transition: opacity .2s, visibility .2s;
+    color:rgb(255, 255, 118);
+  }
+}
+@media screen and (max-width: 670px) {
+  header nav ul li{
+    visibility: hidden;
+  }
+  .fa-bars{
+    float: left;
+    visibility: visible;
+    font-size: 2em;
+    padding: 1%;
+    margin:0;
+    
+  }
+  .fa-star{
+    margin-top: 20%;
+    font-size: .2em;
+  }
+  header form input{
+    
+    width:40vw;
+  }
+  .meals nav{
+    padding-left: 0;
+  }
+  .meals nav span{
+    font-size: 2vh;
+    width: 20% !important;
+  }
+  .hOne{
+   font-size: 5vw; 
+  }
+  .about h1+h1{
+    font-size:6vw;
+  }
+  .meals>section{
+    margin:6vw;
+  }
+  .meals{
+    height:80vh;
+  }
+  .meals div{
+    
+    margin-top: 0%;
+    position: relative;
+    float:left;
+    margin:1vw;
+    width:20vw;
+    height:20vh;
+    margin-bottom:0%;
+    overflow-y:hidden;
+  
+    
+  }
+  .meals div p{
+    font-size: 100%;
+    text-align: center;
+    padding-top: 3vh;
+    background-color: rgba(56, 56, 56, 0.575);
+    color:white;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    position:absolute;
+    opacity:0;
+    visibility: hidden;
+    width:100%;
+    height:100%;
+    transition: opacity .2s, visibility .2s;
+  }
+  .meals div p+p{
+    background-color:rgba(255, 255, 255, 0);
+    text-shadow: 1px 1px 2px black;
+    font-size: 75%;
+    text-align: center;
+    padding-top: 7vh;
+    color:white;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    position:absolute;
+    opacity:0;
+    visibility: hidden;
+    width:100%;
+    height:100%;
+    transition: opacity .2s, visibility .2s;
+  }
+  .meals div button{
+    border-radius: .25em;
+    border-color:orange;
+    font-size: 2vw;
+    margin-left: 30%;
+    text-align: center;
+    margin-top: 12vh;
+    background-color: orange;
+    color:white;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    position:absolute;
+    opacity:0;
+    visibility: hidden;
+    width:40%;
+    height:14%;
+    transition: opacity .2s, visibility .2s;
+  }
+  
+  .meals div i{
+    padding-top: 8vh;
+    margin-left: 34%;
+    color:white;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    position:absolute;
+    opacity:0;
+    visibility: hidden;
+    width:100%;
+    height:100%;
+    transition: opacity .2s, visibility .2s;
+    color:rgb(255, 255, 118);
+  }
+
+  .open{
+    height:90vh;
+    padding-top: 0;
+    top:0vh;
+  }
+  .open div{
+    float:none;
+    margin:0;
+    text-align: center;
+    font-size: 2vh;
+    padding:0;
+  }
+  
+}
+*/
